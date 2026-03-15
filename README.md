@@ -81,6 +81,8 @@ https://stellar.expert/explorer/testnet/contract/XXXXXXXX
 
 ---
 
+![tx](./explorer.png)
+
 ## Future Improvements
 
 - Multiple-choice questions
