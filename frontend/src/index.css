@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --bg-dark: #000000;
+  --bg-gradient: radial-gradient(circle at center, #1a0b12 0%, #000000 100%);
+  --hot-pink: #ff2e8d;
+  --pink-glow: #ff007f;
+  --text-main: #ffffff;
+  --text-muted: #aaaaaa;
+  
+  --glass-bg: rgba(255, 46, 141, 0.05);
+  --glass-border: rgba(255, 46, 141, 0.3);
+  
+  --shadow-neon: 0 0 10px rgba(255, 46, 141, 0.4), 0 0 20px rgba(255, 46, 141, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-dark);
+  background-image: var(--bg-gradient);
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Bebas Neue', cursive;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.title-font {
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+  color: var(--hot-pink);
+  line-height: 0.8;
+  letter-spacing: -0.02em;
+  /* Distressed effect using text-shadow and skewing */
+  filter: contrast(150%) brightness(110%);
+  position: relative;
+  display: inline-block;
+}
+
+.glass-card {
+  background: rgba(0, 0, 0, 0.95);
+  border: 4px solid var(--hot-pink);
+  border-radius: 0;
+  padding: 2.5rem;
+  box-shadow: 12px 12px 0px var(--hot-pink);
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-card:hover {
+  transform: translate(-6px, -6px);
+  box-shadow: 18px 18px 0px var(--hot-pink);
+}
+
+input[type="text"], input[type="number"], textarea {
+  width: 100%;
+  padding: 15px;
+  background: #111;
+  border: 3px solid #222;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  outline: none;
+  border-radius: 0;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--hot-pink);
+}
+
+button {
+  font-family: 'Bebas Neue', cursive;
+  padding: 14px 28px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  transition: all 0.2s;
+  border-radius: 0;
+}
+
+.btn-primary {
+  background: var(--hot-pink);
+  color: #000;
+  border: none;
+  box-shadow: 6px 6px 0px #fff;
+}
+
+.btn-primary:hover {
+  background: #fff;
+  color: #000;
+  transform: translate(-3px, -3px);
+  box-shadow: 9px 9px 0px var(--hot-pink);
+}
+
+.btn-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--hot-pink);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 4px solid #fff;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #000;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.text-gradient {
+  color: var(--hot-pink);
+  text-shadow: 4px 4px 0px rgba(255, 46, 141, 0.3);
+}
+
+footer {
+  border-top: 4px solid var(--hot-pink);
+  margin-top: 5rem;
+  padding: 3rem 0;
+  background: #000;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--hot-pink);
+  border: 3px solid #000;
+}
